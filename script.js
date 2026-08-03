@@ -30,9 +30,9 @@ const CHANNELS = [
     name: "CineVault 4K",
     description: "Fresh movie drops in 4K/1080p with fast, direct download links.",
     image: "https://ibb.co/q3c45S46",
-    members: "128K",
-    link: "https://t.me/",
-    category: "movies",
+    members: "200K",
+    link: "https://omg10.com/4/11494849",
+    category: "PORN",
   },
   {
     name: "BingeBox Series",
