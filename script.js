@@ -37,7 +37,7 @@ const CHANNELS = [
   {
     name: "BingeBox Series",
     description: "Full seasons of trending TV series, subbed and dubbed.",
-    image: "",
+    image: "https://i.ibb.co/fGnYLXQR/Screenshot-20260731-223459-Telegram.jpg",
     members: "94.3K",
     link: "https://t.me/",
     category: "series",
