@@ -132,11 +132,11 @@ const CHANNELS = [
    -------------------------------------------------------------------------- */
 const CATEGORIES = [
   { id: "all", label: "All" },
-  { id: "movies", label: "Movies" },
+  { id: "vedios", label: "vedios" },
   { id: "series", label: "Series" },
   { id: "anime", label: "Anime" },
-  { id: "games", label: "Games" },
-  { id: "education", label: "Education" },
+  { id: "viral", label: "viral" },
+  { id: "movies", label: "movies" },
   { id: "others", label: "Others" },
 ];
 
