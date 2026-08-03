@@ -29,7 +29,7 @@ const CHANNELS = [
   {
     name: "CineVault 4K",
     description: "Fresh movie drops in 4K/1080p with fast, direct download links.",
-    image: "",
+    image: "https://ibb.co/q3c45S46",
     members: "128K",
     link: "https://t.me/",
     category: "movies",
