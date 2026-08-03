@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- ============ SEO META TAGS ============ -->
+  <title>NeoSignal — Premium Telegram Channel Hub</title>
+  <meta name="description" content="NeoSignal is a curated directory of the best Telegram channels — movies, series, anime, games, education and more. Find your next channel in seconds." />
+  <meta name="keywords" content="telegram channels, telegram hub, telegram directory, movies channel, anime channel, games channel, education channel" />
+  <meta name="author" content="NeoSignal" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- ============ OPEN GRAPH / SOCIAL PREVIEW ============ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NeoSignal — Premium Telegram Channel Hub" />
+  <meta property="og:description" content="A curated directory of the best Telegram channels — movies, series, anime, games, education and more." />
+  <meta property="og:image" content="assets/og-cover.png" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:site_name" content="NeoSignal" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NeoSignal — Premium Telegram Channel Hub" />
+  <meta name="twitter:description" content="A curated directory of the best Telegram channels — movies, series, anime, games, education and more." />
+  <meta name="twitter:image" content="assets/og-cover.png" />
+
+  <!-- ============ FAVICON (placeholder — swap for your own /assets/favicon.png) ============ -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230B0B0B' stroke='%23FFD700' stroke-width='4'/%3E%3Ctext x='50' y='64' font-size='50' text-anchor='middle' fill='%2300C8FF' font-family='Arial'%3EN%3C/text%3E%3C/svg%3E" />
+
+  <!-- ============ FONTS ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ============ STYLES ============ -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       LOADING SCREEN — shown until window fully loads, then fades
+  ============================================================= -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-ring"></div>
+    <p class="loader-text">INITIALIZING<span class="dots">...</span></p>
+  </div>
+
+  <!-- ============================================================
+       ANIMATED PARTICLE BACKGROUND (canvas, whole page)
+  ============================================================= -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================= -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <!-- Circular logo placeholder — replace src with your own logo -->
+        <div class="logo-ring">
+          <span class="logo-glyph">N</span>
+        </div>
+        <div class="brand-text">
+          <h1 class="brand-title">NeoSignal</h1>
+          <p class="brand-tagline">Your gateway to the grid</p>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <a href="#channels" class="nav-link">Channels</a>
+        <a href="#footer" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         HERO SECTION
+    ============================================================= -->
+    <section class="hero">
+      <div class="hero-content fade-in">
+        <p class="hero-eyebrow">// SIGNAL_ONLINE</p>
+        <h2 class="hero-title">
+          Tap into the <span class="text-glow-gold">best</span>
+          Telegram channels <span class="text-glow-blue">on the net</span>
+        </h2>
+        <p class="hero-desc">
+          Movies, series, anime, games and courses — hand-picked, constantly updated,
+          zero clutter. Find your channel and jump in.
+        </p>
+        <a href="#channels" class="cta-button">
+          <span>Join Telegram</span>
+          <svg class="cta-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.5 3.5 14.8 20.8c-.3.7-1.1.9-1.7.4l-4.4-3.6-2.4 2.3c-.5.5-1.3.2-1.4-.5L3.6 13l17-10.3c.7-.4 1.4.3 1 1.8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Scroll-down animation -->
+      <a href="#channels" class="scroll-cue" aria-label="Scroll down">
+        <span class="scroll-cue-mouse">
+          <span class="scroll-cue-dot"></span>
+        </span>
+        <span class="scroll-cue-label">SCROLL</span>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         CHANNELS SECTION
+    ============================================================= -->
+    <section id="channels" class="channels-section">
+      <div class="section-heading fade-in">
+        <h3>Browse Channels</h3>
+        <p>Filter by category to find exactly what you're after.</p>
+      </div>
+
+      <!-- Category filters -->
+      <div class="category-filters fade-in" id="category-filters" role="tablist" aria-label="Channel categories">
+        <!-- Buttons are injected by script.js from the CATEGORIES array,
+             but a static "All" button is kept here for no-JS fallback -->
+        <button class="chip active" data-category="all">All</button>
+      </div>
+
+      <!-- Channel grid — populated entirely from script.js -->
+      <div class="channel-grid" id="channel-grid">
+        <!-- Cards injected here by JavaScript -->
+      </div>
+
+      <!-- Empty state, shown when a category has no channels yet -->
+      <div class="empty-state" id="empty-state" hidden>
+        <p>No channels in this category yet.</p>
+        <p class="empty-state-sub">Check back soon, or try a different category.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================= -->
+  <footer id="footer" class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-ring small">
+          <span class="logo-glyph">N</span>
+        </div>
+        <p>NeoSignal &copy; <span id="year"></span>. All signals, one hub.</p>
+      </div>
+
+      <!-- Social links placeholders — swap href for your real profiles -->
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="Telegram">TG</a>
+        <a href="#" class="social-link" aria-label="Twitter / X">X</a>
+        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+        <a href="#" class="social-link" aria-label="Discord">DC</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       BACK TO TOP BUTTON
+  ============================================================= -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
